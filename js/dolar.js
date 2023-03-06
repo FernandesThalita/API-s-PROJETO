@@ -4,10 +4,10 @@ fetch(`http://economia.awesomeapi.com.br/json/last/USD-BRL`)
 
   })
   .then((economia) => {
-    let valor = economia.USDBRL.bid
-    document.getElementById("valor").innerHTML = "$" + valor;
+    document.getElementById("valor").innerHTML = "$" + economia.USDBRL.bid;
     document.getElementById("nome").innerHTML = economia.USDBRL.name;
   });
+  let valor = economia.USDBRL.bid
 function calcular() {
   valorReal = document.getElementById("real").value;
   var calculo = valorReal * valor;
