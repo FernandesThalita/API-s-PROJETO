@@ -1,0 +1,127 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: rgb(243, 233, 219);
+
+}
+
+main {
+    margin: 0 auto;
+    justify-content: center;
+    width: 50%;
+    background-color: aliceblue;
+}
+
+.container-bttn {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.container-bttn .botao {
+    margin: 12px;
+}
+
+.container-bttn .botao input {
+    cursor: pointer;
+    color: rgb(146, 97, 32);
+    box-shadow: 10px 10px 32px 3px rgba(57, 25, 18, 0.47);
+    border: none;
+    border-radius: 7px;
+    font-size: 1.2rem;
+    padding: 26px;
+}
+
+.container-bttn .botao input:hover {
+    color: white;
+    background-color: rgb(206, 150, 77);
+}
+
+.dados {
+    margin: 53px;
+    font-size: 1.5rem;
+    color: rgb(146, 97, 32);
+    ;
+    display: flex;
+    justify-content: center;
+}
+
+.dados ul {
+    list-style: none;
+}
+
+.limpar-dados {
+    display: flex;
+    justify-content: center;
+}
+
+.limpar-dados button {
+    margin: 20px;
+    cursor: pointer;
+    color: rgb(146, 97, 32);
+    box-shadow: 10px 10px 32px 3px rgba(57, 25, 18, 0.47);
+    border: none;
+    border-radius: 7px;
+    font-size: 1.2rem;
+    padding: 10px;
+}
+
+.limpar-dados button:hover {
+    color: white;
+    background-color: rgb(206, 150, 77);
+}
+
+img {
+    width: 300px;
+}
+
+.container-form {
+    display: flex;
+    justify-content: center;
+}
+
+.container-form input {
+    outline: none;
+    padding: 4px 10px;
+}
+
+.container-form button {
+    cursor: pointer;
+    color: rgb(146, 97, 32);
+    border: none;
+    border-radius: 5px;
+    font-size: 1.0rem;
+    padding: 7px;
+}
+
+.container-form button:hover {
+    color: white;
+    background-color: rgb(206, 150, 77);
+}
+
+
+fieldset {
+    box-shadow: 5px 5px 12px 3px rgba(7, 25, 18, 0.47);
+    border-radius: 9px;
+    background-color: rgb(245, 226, 200);
+    border: 1px solid rgb(210, 186, 155);
+}
+
+a {
+    font-weight: bold;
+    margin: 10px;
+    text-decoration: none;
+    background-color: beige;
+    cursor: pointer;
+    color: rgb(146, 97, 32);
+    border: none;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    padding: 7px;
+    box-shadow: 10px 10px 32px 3px rgba(57, 25, 18, 0.47);
+
+}
+
+a:hover {
+    color: white;
+    background-color: rgb(206, 150, 77);
+}

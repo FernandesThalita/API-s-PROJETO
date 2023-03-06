@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+:root {
+    --vermelho: #FF4692;
+    --amarelo: #FFE31C;
+    --azul: #b4ebff;
+    --azul2: #4191BE;
+}
+
+body {
+    background-color: var(--azul);
+}
+
+main {
+    margin-top: 6vh;
+    padding: 5%;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    background-color: var(--azul2);
+    display: inline-flex;
+}
+
+.botao { 
+    margin: 15px;
+}
+
+.botao button {
+    padding: 11px;
+    cursor: pointer;
+    font-size: 1rem;
+    color: #fff;
+    font-weight: bold;
+    border: 1px solid var(--azul2);
+    background-color: var(--vermelho);
+}
+
+.botao button:active {
+    background-color: #ca3372;
+}
+
+.form-field {
+    color: #4a4949;
+    display: block;
+    width: 100%;
+    padding: 8px 16px;
+    line-height: 25px;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: inherit;
+    border: 1px solid var(--vermelho2)
+}
+
+::placeholder {
+    color: #a2a1a1;
+}
+
+:focus {
+    outline: none;
+    border-color: var(--azul);
+}
+
+span {
+    line-height: 25px;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: inherit;
+    align-items: center;
+    padding: 9px;
+    color: whitesmoke;
+    background-color: var(--azul2)
+}
+
+.input {
+    margin: 5px;
+    position: relative;
+    display: flex;
+    width: 100%;
+}
+
+.img {
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+}
+
+.img img {
+    width: 80%;
+}
+
+form {
+
+    display: flex;
+    box-shadow: -15px 0px 13px 0px rgba(2, 16, 56, 0.46);
+    padding: 30px;
+    background-color: var(--vermelho);
+}
+
+h3 {
+    padding: 1px;
+    width: 100%;
+    margin: 30px 30px 30px 0;
+    display: flex;
+    font-size: 2.0rem;
+    font-weight: 500;
+    align-items: center;
+    color: whitesmoke;
+}
+
+.bttn-box {
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+}
+
+.bttn-box button {
+    cursor: pointer;
+    font-size: 1.0rem;
+    color: #fff;
+    font-weight: bold;
+    border: 1px solid var(--azul2);
+    background-color: var(--azul2);
+    width: 70%;
+    padding: 5%;
+    margin: 2px;
+}
+
+.bttn-box button:active {
+    background-color: #2f7095;
+}
+
+@media only screen and (max-width: 760px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+}

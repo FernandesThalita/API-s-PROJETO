@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png"  href="favicon/favicon-32x32.png">
+  <link rel="stylesheet" href="css/dolar.css" />
+  <title>Valor do Dólar</title>
+</head>
+
+<body>
+  <main>
+
+    <div class="conteudo">
+      <div class="container">
+        <button onclick="voltar()">Voltar</button>
+        <div class="container-p">
+          <p id="valorAtual">Valor atual</p>
+        </div>
+        <div class="img-dolar">
+          <img src="img/dolar-icon.png" width="300" />
+        </div>
+        <div class="nome" id="nome"></div>
+        <div class="valor" id="valor"></div>
+
+        <!-- <div class="valor-extra">
+            <div class="valores" id="maior"></div>
+            <div class="valores" id="menor"></div>
+          </div> -->
+      </div>
+      <div class="container-conversor">
+        <div class="container-p">
+          <p>Conversão</p>
+        </div>
+
+        <div class="img-dolar">
+          <img src="img/icon-con.png" width="420" />
+        </div>
+
+        <div class="input-box">
+          <input type="number" id="real" placeholder="Dólar" />
+        </div>
+        <div class="container-valor">
+          <div id="valorDolar">...</div>
+        </div>
+
+        <div class="container-botoes">
+          <button id="botaoCalcular">Calcular</button>
+          <button onclick="trocar()" id="botaoTrocar">
+            Trocar para Real
+          </button>
+          <button type="reset" onclick="limpar()">Resetar</button>
+
+        </div>
+      </div>
+    </div>
+
+
+
+  </main>
+</body>
+<script src="js/dolar.js"></script>
+
+</html>

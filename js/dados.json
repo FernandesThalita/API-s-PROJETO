@@ -1,0 +1,32 @@
+{
+    "produto1": {
+        "nome": "BackPack para Gatos - VERDE",
+        "preco": "R$ 29,95",
+        "imagem": "<img src='img/mochila.jpeg' width='100px'>"
+    },
+    "produto2": {
+        "nome": "Collet Set para Gatos",
+        "preco": "R$ 205,90",
+        "imagem": "<img src='img/coleira.jpg' width='100px'>"
+    },
+    "produto3": {
+        "nome": "Colar Personalizado-Gatos",
+        "preco": "R$ 39,90",
+        "imagem": "<img src='img/collar.jpeg' width='100px'>"
+    },
+    "produto4": {
+        "nome": "Kit playGround Para Gatos",
+        "preco": "R$ 267,00",
+        "imagem": "<img src='img/playground.jpg' width='100px'>"
+    },
+    "produto5": {
+        "nome": "Ração Para Gatos Bolly",
+        "preco": "R$ 59,90",
+        "imagem": "<img src='img/racao.jpg' width='100px'>"
+    },
+    "produto6": {
+        "nome": "Areia para gato -El Gato",
+        "preco": "R$ 63,30",
+        "imagem": "<img src='img/areia.jpg' width='100px'>"
+    }
+}

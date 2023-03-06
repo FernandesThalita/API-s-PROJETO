@@ -1,0 +1,113 @@
+* {
+    text-decoration: none;
+    padding: 0;
+    margin: 0 auto;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+main {
+    display: flex;
+    padding: 14%;
+    /* margin: 30vh; */
+}
+
+body {
+    background: linear-gradient(198deg, rgba(28, 0, 129, 1) 0%, rgba(2, 3, 19, 1) 100%);
+    background-size: cover;
+}
+
+.container {
+    margin-top: 6px;
+    padding: 5px;
+    color: whitesmoke;
+    display: flex;
+    justify-content: space-around;
+}
+
+.bem-vindo {
+    padding: 10px;
+}
+
+.bem-vindo h1 {
+    font-size: 3.8rem;
+}
+
+.bem-vindo h3 {
+    font-size: 2.0rem;
+}
+
+b {
+    color: rgb(143, 91, 191);
+}
+
+.text-box {
+    text-align: justify;
+    font-weight: 700;
+    font-weight: 500;
+}
+
+.imagem {
+    align-items: center;
+    margin-right: 15px;
+    animation-name: floating;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes floating {
+    0% {
+        transform: translate(0, 0px);
+    }
+
+    50% {
+        transform: translate(0, 15px);
+    }
+
+    100% {
+        transform: translate(0, -0px);
+    }
+}
+
+.box-bttn {
+    margin-top: 6%;
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 2fr));
+}
+
+.box-bttn a {
+    text-align: center;
+    width: 100%;
+    font-size: 1.5rem;
+    padding: 10px;
+    color: whitesmoke;
+    background-color: rgb(53, 53, 174);
+    border-radius: 15px;
+}
+
+.box-bttn a:hover {
+    background-color: rgb(26, 26, 97);
+
+}
+
+a[title]:hover:after {
+    content: attr(title);
+    padding: 5px;
+    font-weight: 600;
+    font-size: 1.0rem;
+    background: rgb(61, 7, 143);
+    color: rgb(244, 237, 237);
+    border: 1px solid rgb(126, 101, 250);
+    border-radius: 5px;
+    position: absolute;
+    z-index: 1;
+
+}
+
+@media only screen and (max-width: 990px) {
+    .imagem {
+        display: none;
+    }
+}

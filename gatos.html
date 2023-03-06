@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="favicon/cat-icon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/gatos.css">
+    <title>Cat API</title>
+</head>
+
+<body>
+
+    <main>
+        <div class="container">
+            <div class="botao">
+                <button onclick="voltar()"><- </button>
+            </div>
+
+            <div class="filtro">
+
+                <select onchange="imagem(value)" name="raca_selector" id="raca_selector">
+                    <option value="selecione">Selecione uma espécie</option>
+                </select>
+            </div>
+            <div class="box-one">
+                <div class="img">
+                    <img id="raca_image"></img>
+                </div>
+                <div class="nome">
+                    <div id="nome"></div>
+                </div>
+                <div class="origem">
+                    <div id="origem"></div>
+                </div>
+
+                <div class="temperamento">
+                    <div id="raca_json"></div>
+                </div>
+                <div class="descricao">
+                    <div id="descricao"></div>
+                </div>
+                <hr>
+            </div>
+            <div class="box-two">
+                <div class="info">
+                    <i class="fa fa-heart" title="Affection"></i>
+                    <div id="afeicao" class="nota"></div>
+                </div>
+                <div class="info">
+                    <i class="fa fa-cubes" title="Intelligence"></i>
+                    <div id="inteligencia" class="nota"></div>
+                </div>
+                <div class="info">
+                    <i class="fa fa-cogs" title="Adaptability"></i>
+                    <div id="adaptacao" class="nota"></div>
+                </div>
+
+
+            </div>
+        </div>
+
+    </main>
+</body>
+<script>
+    const url = `https://api.thecatapi.com/v1/breeds`;
+    const api_key = "live_GofVvF7yIdAqHKULxmptDS33BWksFodTIP5UMVjvSBo3IUynIHMNmsIvfAByQFWL"
+    let storedBreeds = []
+
+    const teste = fetch(url, {
+        headers: {
+            'x-api-key': api_key
+        }
+    })
+        .then((response) => {
+            return response.json();
+        })
+        .then((data) => {
+            console.log(data)
+            //filter que inclui raças com objetos img
+            data = data.filter(img => img.image?.url != null)
+
+            storedBreeds = data;
+
+            for (let i = 0; i < storedBreeds.length; i++) {
+                const raca = storedBreeds[i];
+                let option = document.createElement('option');
+
+                //pular raça que não tem img
+                if (!raca.image) continue
+
+
+                option.value = i;
+                option.innerHTML = `${raca.name}`;
+                document.getElementById('raca_selector').appendChild(option);
+
+            }
+            //mostrar a 1 posiçao  img por padrao
+            imagem(0)
+
+        })
+        .catch(function (error) {
+            console.log(error);
+        });
+
+
+
+    function imagem(index) {
+
+        document.getElementById("raca_image").src = storedBreeds[index].image.url;
+
+        document.getElementById("descricao").textContent = storedBreeds[index].description;
+
+        document.getElementById("nome").textContent = storedBreeds[index].name;
+        document.getElementById("raca_json").textContent = storedBreeds[index].temperament
+        document.getElementById("afeicao").innerHTML = `${storedBreeds[index].affection_level}/5`;
+        document.getElementById("inteligencia").innerHTML = `${storedBreeds[index].intelligence}/5`;
+        document.getElementById("adaptacao").innerHTML = `${storedBreeds[index].adaptability}/5`;
+
+        document.getElementById("origem").textContent = ` ${storedBreeds[index].origin} , ${storedBreeds[index].country_code}`
+    }
+
+    function voltar() {
+        location = "index.html";
+    }
+
+
+</script>
+
+</html>

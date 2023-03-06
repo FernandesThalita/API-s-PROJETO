@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png"  href="favicon/location.png">
+    <link rel="stylesheet" href="css/cep.css">
+    <title>API - CEP</title>
+</head>
+
+<body>
+
+    <main>
+        <div class="container">
+            <div class="botao">
+                <button onclick="voltar()">Voltar</button>
+            </div>
+            <div class="img">
+                <img src="img/place.png">
+            </div>
+
+            <form>
+                <div class="formulario">
+                    <h3>Informe seu CEP</h3>
+                    <div class="input-box">
+                        <div class="input">
+                            <span>CEP</span>
+                            <input class="form-field" type="number" placeholder="CEP" id="cep">
+                        </div>
+
+                        <div class="input">
+                            <span>Rua</span>
+                            <input class="form-field" type="text" placeholder="Rua" autocomplete="on" id="rua">
+                        </div>
+
+                        <div class="input">
+                            <span>Número</span>
+                            <input class="form-field" type="text" placeholder="Número" id="numero">
+                        </div>
+
+                        <div class="input">
+                            <span>Bairro</span>
+                            <input autocomplete="on" class="form-field" type="text" placeholder="Bairro" id="bairro">
+                        </div>
+
+                        <div class="input">
+                            <span>Cidade</span>
+                            <input autocomplete="on" class="form-field" type="text" placeholder="Cidade" id="cidade">
+                        </div>
+
+                        <div class="input">
+                            <span>Estado</span>
+                            <input autocomplete="on" class="form-field" type="text" placeholder="Estado" id="estado">
+                        </div>
+
+                    </div>
+                    <div class="bttn-box">
+                        <button type="submit">Submit</button>
+                        <button type="reset">Limpar</button>
+                    </div>
+
+            </form>
+        </div>
+
+        </div>
+    </main>
+
+</body>
+<script src="js/cep.js"></script>
+
+</html>

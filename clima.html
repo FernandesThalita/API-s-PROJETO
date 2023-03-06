@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/clima.css" />
+  <link rel="icon" type="image/png"  href="favicon/clima.png">
+  <script src=" https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <title>Tempo</title>
+</head>
+
+<body>
+  <main>
+
+
+    <div class="container-busca">
+      <div class="botao">
+        <button id="voltar-bttn" onclick=" voltar()"> <- </button>
+      </div>
+      <div class="input-box">
+        <input required type="text" id="city" placeholder="Busca" />
+      </div>
+      <div class="botao">
+        <button onclick="getWeather()">Procurar</button>
+      </div>
+    </div>
+
+    <div class="container-temperatura">
+      <div class="local">
+        <h3 id="lugar">Digite o local que deseja consultar o clima.</h3>
+      </div>
+      <div class="temperatura">
+        <h2 id="temperatura"></h2>
+      </div>
+      <div class="imagem">
+        <div id="imagem-icon"></div>
+      </div>
+      <div class="infos-adicionais">
+        <p id="umidade"></p>
+        <p id="max"></p>
+        <p id="min"></p>
+      </div>
+      <div class="botao" id="limpar">
+        <button onclick="limpar()">Limpar</button>
+      </div>
+    </div>
+
+
+
+  </main>
+
+</body>
+<script>
+
+
+
+  
+
+  async function getWeather() {
+    const city = document.querySelector("#city").value;
+
+    
+    const response = await axios.get(
+      `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=64ed82577ced7f69cb1687f0ce536131`
+    );
+
+    const tempCelsius = response.data.main.temp;
+    const tempUmidade = response.data.main.humidity;
+    const tempMax = response.data.main.temp_max;
+    const tempMin = response.data.main.temp_min;
+    const country = response.data.sys.country;
+
+
+
+
+
+    document.querySelector(
+      "#temperatura"
+    ).innerHTML = ` ${tempCelsius.toFixed(2)} °C `;
+
+    if (tempCelsius >= 25) {
+      document.querySelector(
+        "#imagem-icon"
+      ).innerHTML = ("<img src='img/dia-ensolarado.png' width='100px'>");
+    } else if (tempCelsius < 10) {
+      document.querySelector(
+        "#imagem-icon"
+      ).innerHTML = ("<img src='img/congeladas.png' width='100px'>");
+    } else {
+      document.querySelector(
+        "#imagem-icon"
+      ).innerHTML = ("<img src='img/clima-morno.png' width='100px'>");
+    }
+
+
+    document.querySelector("#lugar").innerHTML = city + ',' + country;
+    document.querySelector("#umidade").innerHTML = `<b>Umidade: </b>${tempUmidade / 1 + "%"
+      }`;
+    document.querySelector(
+      "#max"
+    ).innerHTML = `<b>Máxima: </b>${tempMax} °C  `;
+    document.querySelector(
+      "#min"
+    ).innerHTML = `<b>Miníma: </b> ${tempMin} °C `;
+  }
+  getWeather();
+
+  function voltar() {
+    location = "index.html";
+  }
+  function limpar() {
+    location.reload()
+  }
+
+</script>
+
+</html>

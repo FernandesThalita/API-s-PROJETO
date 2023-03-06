@@ -1,0 +1,162 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: rgb(231, 229, 229);
+}
+
+main {
+   display: flex;
+   justify-content: center;
+   flex-direction: column;
+   padding: 0% 25%;
+}
+
+
+.container-busca {
+    width: 100%;
+    margin-top: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container-temperatura {
+   margin-top: 1vh;
+    padding: 5px;
+    border-radius: 100px;
+    background-color: whitesmoke;
+    box-shadow: 0px 5px 0px 0px rgba(39, 23, 48, 0.75);
+}
+
+button {
+  
+    box-shadow: 0px 5px 0px 0px rgba(39, 23, 48, 0.75);
+    font-weight: 700;
+    color: aliceblue;
+    border: none;
+    border-radius: 4px;
+    background-color: rgb(112, 77, 144);
+    padding: 10px;
+}
+#limpar button{
+    margin-bottom: 15px;
+}
+
+button:active {
+    box-shadow: none;
+    transform: translateY(5px);
+}
+#getWeather::after{
+    box-shadow: none;
+    transform: translateY(5px);
+}
+
+button:hover {
+    box-shadow: 0px 5px 0px 0px rgba(17, 8, 9, 0.75);
+    color: white;
+    background-color: rgb(76, 53, 139);
+}
+
+.container-busca input {
+    margin: 0px 7px 0 7px;
+    caret-color: rgb(76, 53, 139);
+    width: 250px;
+    outline: none;
+    padding: 8px 15px;
+    box-shadow: 0px 5px 0px 0px rgba(17, 8, 9, 0.75);
+}:focus{
+    font-size: 16px;
+}
+
+.container-busca input:active {
+    box-shadow: 0px 1px 0px 0px rgba(17, 8, 9, 0.75);
+    ;
+    transform: translateY(1px);
+}
+
+.temperatura {
+    margin-top: 2vh;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.temperatura h2 {
+    
+    font-size: 3.8rem;
+    color: rgb(112, 77, 144);
+}
+
+.infos-adicionais {
+    display: flex;
+    justify-content: center;
+}
+.botao{
+    display: flex;
+    justify-content: center;
+}
+.imagem {
+
+    display: flex;
+    justify-content: center;
+    animation-name: floating;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes floating {
+    0% {
+        transform: translate(0, 0px);
+    }
+
+    50% {
+        transform: translate(0, 15px);
+    }
+
+    100% {
+        transform: translate(0, -0px);
+    }
+}
+
+.infos-adicionais {
+    font-size: 1.2rem;
+    display: grid;
+    justify-content: space-around;
+    align-items: center;
+    margin: 17px;
+}
+
+b {
+    color: rgb(112, 77, 144);
+}
+
+.local {
+    font-size: 1.5rem;
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-around;
+    color: rgb(133, 133, 133);
+}
+
+#voltar-bttn {
+  
+    font-weight: 900;
+    font-size: 1.0rem;
+}
+
+#limpar {
+  
+    display: flex;
+    justify-content: center;
+}
+
+@media only screen and (max-width: 400px) {
+    main {
+        margin: 3%;
+        margin-top: -50px;
+    }
+}

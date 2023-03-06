@@ -1,0 +1,134 @@
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+}
+
+:root {
+    --verde2: #c9fdd7;
+    --fundo: #f8fcfb;
+    --verde: #79d1c3;
+    --azul: #6892d5;
+}
+
+body {
+    background-color: white;
+}
+
+header {
+    background-color: var(--verde);
+    width: 100%;
+}
+
+.container-header {
+    color: white;
+    align-items: center;
+    width: 100%;
+    display: flex;
+    width: 100%;
+}
+
+.cat_shop {
+    width: 100%;
+    padding: 20px;
+    margin-left: 9px;
+    display: flex;
+    justify-content: center;
+}
+
+.cat_shop h2 {
+    font-size: 2.5rem;
+    text-shadow: -2px 2px 2px rgba(48, 57, 52, 0.5);
+}
+
+.icons {
+    cursor: pointer;
+    background-color: var(--verde2);
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-size: 1.9rem;
+}
+
+.icons i {
+    margin: 5px 15px;
+    border-radius: 16px;
+    background-color: var(--verde);
+    font-size: 1.5rem;
+    padding: 25px;
+}
+
+.icons i:hover {
+    color: #436293;
+    background-color: #6892d5;
+}
+
+main {
+    margin-top: 7vh;
+    padding: 4%;
+}
+
+.container-produtos {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 3fr));
+}
+
+.card-produto {
+    color: var(--verde);
+    text-align: center;
+    border-radius: 16px;
+    padding: 8%;
+    margin: 2%;
+    box-shadow: 10px 10px 14px 7px rgba(48, 47, 47, 0.32);
+
+}
+
+.card-produto img {
+    margin-bottom: 10px;
+    width: 80%;
+}
+
+.botao {
+    margin-top: 36px;
+}
+
+.card-produto a {
+    box-shadow: 10px 21px 30px -24px rgb(6, 57, 39);
+    border-radius: 10%;
+    font-size: 1.4rem;
+    padding: 5%;
+    background-color: var(--verde);
+    color: white;
+    font-weight: 500;
+}
+
+.infos {
+    font-size: 23px;
+
+}
+
+.card-produto a:hover {
+    background-color: #6892d5;
+}
+
+.precos {
+    font-size: 1.9rem;
+    font-weight: bolder;
+}
+
+footer {
+    padding: 21px;
+    margin-top: 10vh;
+    width: 100%;
+    background-color: var(--verde);
+}
+
+.container-footer {
+    color: white;
+    display: flex;
+    justify-content: center;
+
+}
