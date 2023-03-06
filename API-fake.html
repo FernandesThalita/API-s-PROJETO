@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png"  href="favicon/api-fake.png">
+    <link rel="stylesheet" href="css/API.css">
+    <title>Home</title>
+</head>
+
+<body>
+    <main>
+
+        <div class="container-form">
+            <fieldset>
+                <input type="text" placeholder="CPF" id="cpf" maxlength="14" onkeyup="mascara_cpf()"
+                    autocomplete="off" />
+                <input type="password" placeholder="Senha" id="senha" />
+                <button type="submit" onclick="logar(); return false" id="botao-logar">Logar</button>
+            </fieldset>
+        </div>
+
+
+        <form>
+            <div class="dados">
+                <img src="" id="img">
+                <ul>
+                    <li id="nome"></li>
+                    <li id="cpf"></li>
+                    <li id="profissao"></li>
+                    <li id="idade"></li>
+                    <li id="salario"></li>
+                    <li id="aproveitamento"></li>
+                </ul>
+
+            </div>
+            <div class="limpar-dados">
+                <button onclick="limparDados()">Limpar</button>
+
+            </div>
+            <a href="https://github.com/FernandesThalita/API-FAKE.git">Todos Login´s</a>
+        </form>
+    </main>
+    <script src="js/API.js"></script>
+</body>
+
+</html>
