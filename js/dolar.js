@@ -4,7 +4,7 @@ fetch(`http://economia.awesomeapi.com.br/json/last/USD-BRL`)
 
   })
   .then((economia) => {
-    valor = economia.USDBRL.bid
+    let valor = economia.USDBRL.bid
     document.getElementById("valor").innerHTML = "$" + valor;
     document.getElementById("nome").innerHTML = economia.USDBRL.name;
     document.getElementById("codigo").innerHTML = economia.USDBRL.code;
