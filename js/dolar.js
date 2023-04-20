@@ -1,4 +1,4 @@
-fetch(`http://economia.awesomeapi.com.br/json/last/USD-BRL`)
+fetch(`https://economia.awesomeapi.com.br/json/last/USD-BRL`)
   .then((resposta) => {
     return resposta.json();
 
